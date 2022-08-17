@@ -55,7 +55,7 @@ export default function Index({ posts, globalData }) {
                   )}
                   <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
                   {post.data.description && (
-                    <p className="mt-3 text-lg opacity-60">
+                    <p className="mt-3 text-base md:text-lg opacity-60">
                       {post.data.description}
                     </p>
                   )}

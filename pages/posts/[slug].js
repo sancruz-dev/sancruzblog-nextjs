@@ -6,15 +6,25 @@ import {
   postFilePaths,
 } from '../../utils/mdx-utils';
 
+import {
+  CustomLink, 
+  CustomH2, 
+  CustomH3,
+  CustomBold,
+  CustomSpan,
+  CustomHr,
+  CustomBlockquote,
+} from '../../components/ComponentsForMDX';
+
 import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
 import Link from 'next/link';
 import ArrowIcon from '../../components/ArrowIcon';
-import CustomLink from '../../components/CustomLink';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
+
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -22,6 +32,12 @@ import SEO from '../../components/SEO';
 // here.
 const components = {
   a: CustomLink,
+  h2: CustomH2,
+  h3: CustomH3,
+  b: CustomBold,
+  span: CustomSpan,
+  hr: CustomHr,
+  blockquote: CustomBlockquote,
   // It also works with dynamically-imported components, which is especially
   // useful for conditionally loading components for certain routes.
   // See the notes in README.md for more details.

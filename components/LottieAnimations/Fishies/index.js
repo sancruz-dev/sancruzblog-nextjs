@@ -1,9 +1,9 @@
 import Lottie from "react-lottie";
 import { useState } from "react";
-import animationData from './animShark.json';
+import animationData from './animFishies.json';
 import styles from "../../Layout.module.css"
 
-export function Shark() {
+export function Fishies() {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -12,14 +12,13 @@ export function Shark() {
       preserveAspectRatio: 'xMidYMid slice'
     }
   }
-  const [isLiked, setLikeState] = useState(false);
 
   const [animationState, setAnimationState] = useState({
     isStopped: false, isPaused: false
   })
   return (
     <>
-      <div className={styles.swim}>
+      <div className={`${styles.swim} mr-96`}>
         <div className="pointer-events-none">
           <Lottie
             options={defaultOptions}

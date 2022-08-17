@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import { useEffect } from 'react';
 import styles from './Layout.module.css';
 import { Shark } from './LottieAnimations/Shark';
+import { Fishies } from './LottieAnimations/Fishies';
 
 export function GradientBackground({ variant, className }) {
   const classes = classNames(
@@ -56,7 +57,10 @@ export default function Layout({ children }) {
         {children}
       </div>
       <div className='w-full flex justify-end'>
-        <Shark/>
+        <div className='flex justify-between w-[50%]'>
+          <Fishies/>
+          <Shark/>
+        </div>
       </div>
     </div>
   );
