@@ -4,7 +4,7 @@ export default function CustomLink({ as, href, ...otherProps }) {
   return (
     <>
       <Link as={as} href={href}>
-        <a {...otherProps} />
+        <a className='bg-black' {...otherProps} />
       </Link>
     </>
   );

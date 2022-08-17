@@ -48,14 +48,15 @@ export default function PostPage({
             {frontMatter.title}
           </h1>
           {frontMatter.description && (
-            <p className="text-xl mb-4">{frontMatter.description}</p>
+            <p className="text-base mb-4 md:text-xl">{frontMatter.description}</p>
           )}
         </header>
         <main>
-          <article className="prose dark:prose-dark">
+          <article className="prose dark:prose-dark text-lg">
             <MDXRemote {...source} components={components} />
           </article>
         </main>
+
         <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
           {prevPost && (
             <Link href={`/posts/${prevPost.slug}`}>
@@ -83,6 +84,7 @@ export default function PostPage({
               </a>
             </Link>
           )}
+
         </div>
       </article>
       <Footer copyrightText={globalData.footerText} />

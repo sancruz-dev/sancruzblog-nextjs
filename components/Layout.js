@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { useEffect } from 'react';
 import styles from './Layout.module.css';
+import { Shark } from './LottieAnimations/Shark';
 
 export function GradientBackground({ variant, className }) {
   const classes = classNames(
@@ -50,9 +51,12 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className="relative pb-24 overflow-hidden">
-      <div className="flex flex-col items-center max-w-2xl w-full mx-auto">
+    <div className="relative pb-8 overflow-hidden">
+      <div className="flex flex-col items-center max-w-3xl w-full mx-auto">
         {children}
+      </div>
+      <div className='w-full flex justify-end'>
+        <Shark/>
       </div>
     </div>
   );

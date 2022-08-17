@@ -15,7 +15,7 @@
   /* mix-blend-mode: normal; */
   max-height: 800px;
   height: 80vh;
-  max-width: 1400px;
+  max-width: 1400px; 
   width: 70vw;
   width: 100%;
   filter: blur(44px);
@@ -44,3 +44,26 @@
   filter: blur(44px);
   z-index: -1;
 }
+
+.shark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 12rem;
+  transform: translateX(100%);
+
+  animation: animate 10s infinite ease-in;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-600%);
+  }
+
+}
+

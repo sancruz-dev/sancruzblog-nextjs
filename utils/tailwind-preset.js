@@ -3,7 +3,7 @@ const pluginTypography = require('@tailwindcss/typography');
 const { COLOR_THEMES, FONT_THEMES } = require('../themes');
 
 const THEME = process.env.BLOG_THEME || 'default';
-const FONT_PRIMARY = process.env.BLOG_FONT_HEADINGS || 'sans-serif';
+const FONT_PRIMARY = process.env.BLOG_FONT_HEADINGS || 'monospace';
 const FONT_SECONDARY = process.env.BLOG_FONT_BODY || 'sans-serif';
 
 const hoveredSiblingPlugin = plugin(function ({ addVariant, e }) {
@@ -66,16 +66,16 @@ module.exports = {
             css: {
               color: theme('colors.gray.300'),
               '[class~="lead"]': { color: theme('colors.gray.400') },
-              a: { color: theme('colors.gray.100') },
+              a: { color: theme('colors.primary') },
               strong: { color: theme('colors.gray.100') },
               'ul > li::before': { backgroundColor: theme('colors.gray.700') },
-              hr: { borderColor: theme('colors.gray.800') },
+              hr: { borderColor: theme('colors.gradient-4') },
               blockquote: {
-                color: theme('colors.gray.100'),
-                borderLeftColor: theme('colors.gray.800'),
+                color: theme('colors.gray.400'),
+                borderLeftColor: theme('colors.gradient-4'),
               },
               h1: { color: theme('colors.gray.100') },
-              h2: { color: theme('colors.gray.100') },
+              h2: { color: theme('colors.gradient-3') },
               h3: { color: theme('colors.gray.100') },
               h4: { color: theme('colors.gray.100') },
               code: { color: theme('colors.gray.100') },
@@ -89,6 +89,8 @@ module.exports = {
                 borderBottomColor: theme('colors.gray.700'),
               },
               'tbody tr': { borderBottomColor: theme('colors.gray.800') },
+              b: { color: theme('colors.gradient-1') },
+              span: { color: theme('colors.gradient-2') },
             },
           },
         };
