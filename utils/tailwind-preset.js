@@ -66,9 +66,17 @@ module.exports = {
             css: {
               color: theme('colors.gray.300'),
               '[class~="lead"]': { color: theme('colors.gray.400') },
-              a: { color: theme('colors.primary') },
+              a: { 
+                color: theme('colors.primary'),
+              },
+              a: {
+                hover: {
+                  color: theme('colors.gradient-4')
+                }
+              },
               strong: { color: theme('colors.gray.100') },
               'ul > li::before': { backgroundColor: theme('colors.gray.700') },
+              'ul > li::marker': { color: theme('colors.primary') },
               hr: { borderColor: theme('colors.gradient-4') },
               blockquote: {
                 color: theme('colors.gray.400'),
@@ -89,7 +97,7 @@ module.exports = {
                 borderBottomColor: theme('colors.gray.700'),
               },
               'tbody tr': { borderBottomColor: theme('colors.gray.800') },
-              b: { color: theme('colors.gradient-1') },
+              b: { color: theme('colors.primary') },
               span: { color: theme('colors.gradient-2') },
             },
           },

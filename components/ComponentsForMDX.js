@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function CustomLink({ as, href, ...otherProps }) {
   return <>
     <Link as={as} href={href}>
-      <a className='text-primary hover:text-gradient-4 transition-colors' {...otherProps} />
+      <a className='text-primary hover:text-gradient-1 transition-colors no-underline' {...otherProps} />
     </Link>
   </>
 }
@@ -35,5 +35,11 @@ export function CustomSpan({as, ...otherProps}) {
 export function CustomBlockquote({as, ...otherProps}) {
   return <>
       <blockquote className='border-l-gradient-2 opacity-60' as={as} {...otherProps}/>
+  </>
+}
+
+export function CustomLi({as, ...otherProps}) {
+  return <>
+      <li className='marker:text-gradient-2' as={as} {...otherProps}></li>
   </>
 }

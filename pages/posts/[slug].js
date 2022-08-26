@@ -14,6 +14,7 @@ import {
   CustomSpan,
   CustomHr,
   CustomBlockquote,
+  CustomLi,
 } from '../../components/ComponentsForMDX';
 
 import { MDXRemote } from 'next-mdx-remote';
@@ -38,6 +39,7 @@ const components = {
   span: CustomSpan,
   hr: CustomHr,
   blockquote: CustomBlockquote,
+  li: CustomLi,
   // It also works with dynamically-imported components, which is especially
   // useful for conditionally loading components for certain routes.
   // See the notes in README.md for more details.
