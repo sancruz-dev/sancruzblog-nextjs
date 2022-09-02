@@ -14,12 +14,6 @@ export function CustomH2({as, ...otherProps}) {
   </>
 }
 
-export function CustomH3({as, ...otherProps}) {
-  return <>
-      <h3 className='text-primary' as={as} {...otherProps}></h3>
-  </>
-}
-
 export function CustomBold({as, ...otherProps}) {
   return <>
       <b className='text-gradient-2' as={as} {...otherProps}></b>
@@ -41,5 +35,11 @@ export function CustomBlockquote({as, ...otherProps}) {
 export function CustomLi({as, ...otherProps}) {
   return <>
       <li className='marker:text-gradient-2' as={as} {...otherProps}></li>
+  </>
+}
+
+export function CustomImage({as, ...otherProps}) {
+  return <>
+      <img className='rounded-lg shadow-lg' as={as} {...otherProps} />
   </>
 }

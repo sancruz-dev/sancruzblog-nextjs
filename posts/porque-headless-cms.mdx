@@ -1,6 +1,6 @@
 ---
 title: Porquê optei pelo Headless CMS?
-description: 'Neste artigo, destaco a importância do Headless CMS, e sua grande diferença comparada ao CMS padrão que conhecemos atualmente.'
+description: 'Neste artigo, destaco a importância do Headless CMS, e sua grande diferença comparada ao CMS "padrão" que conhecemos atualmente.'
 date: 17 Ago 2022
 ---
 
@@ -13,7 +13,7 @@ date: 17 Ago 2022
 
 <br/>
 
-<span>6 min. de leitura</span>
+<span>7 min. de leitura</span>
 
 ## O que é CMS?
 
@@ -21,11 +21,37 @@ Primordialmente, CMS (Content Managment System), de forma resumida, é um sistem
 
 ## Um exemplo para você 
 
-Atualmente, temos o tão conhecido  [WordPress](https://wordpress.com/pt-br/), que utiliza esse conceito de ponta a ponta, ou seja, tanto na parte do painel de controle tanto quanto na __parte visual (front-end)__. Desse modo, **não é preciso** ter experiência em **programação**, possibilitando qualquer pessoa desenvolver sua própria ideia, seja ela um blog (como este que está lendo agora 😉), loja virtual, [Landing Page](https://rockcontent.com/br/blog/landing-page/), ou qualquer outro tipo de site que precisa ser atualizado constantemente. E tudo isso realizado, teoricamente, a partir de um "arrasta e solta" de elementos e alguns cliques.
+Atualmente, temos o tão conhecido  [WordPress](https://wordpress.com/pt-br/), que utiliza esse conceito de ponta a ponta, ou seja, tanto na parte do painel de controle tanto quanto na __parte visual (front-end)__. 
+
+Desse modo, **não é preciso** ter experiência em **programação**, possibilitando qualquer pessoa desenvolver sua própria ideia, seja ela um blog (como este que está lendo agora 😉), loja virtual, [Landing Page](https://rockcontent.com/br/blog/landing-page/), ou qualquer outro tipo de site que precisa ser atualizado constantemente. E tudo isso realizado, teoricamente, a partir de um "arrasta e solta" de elementos e alguns cliques.
+
+![ssss](../img/posts/ezgif.com-gif-maker.webp)
+
+
+## Meu primeiro contato com CMS
+
+Ano passado (mais conhecido como 2021), eu e meu grupo de TCC desenvolvemos um e-commerce para uma micro-empresa de joias, utilizando o [OpenCart](https://www.opencartbrasil.com.br/) como nosso sistema de gestão de conteúdos. <br/> Foi nosso primeiro contato com um sistema do tipo, no entanto, não foi difícil de usá-lo, mas sim de "limpá-lo".
+
+Quem já usou OC (OpenCart) sabe como é estressante ter que configurar toda a sua loja através do painel do administrador, tendo que enfrentar alguns bugs de variáveis versões dependendo de qual OC que você instalou, ou ter que depender de plugins - muitas vezes de terceiros e não oficiais - para realizar funções imprescindíveis em sua aplicação.
+
+![Logotipos do Open Cart](../img/posts/oc-logo.svg)
+
+
+### Alguns desafios com o OpenCart
+
+Dessa maneira, se o objetivo era apresentar um projeto da nossa maneira (e da cliente), a partir de nossos conhecimentos, algumas coisas tiveram que ser redesenhadas, ou melhor, ***recodadas***. <br/> Nesse sentido, como o sistema OC era baseado em PHP, resolvi estudar seu código fonte e arquitetura, e logo descobri praticamente toda sua funcionalidade. Foi muito trabalhoso, pois haviam muitas pastas, arquivos e códigos sem nenhum comentário. 
+
+Bom, e então, até consegui implementar um design bacana - com algumas animações até - mas me senti muito limitado enquanto desenvolvia, por conta da estrutura padrão do OC, pois eu estava "customizando/alterando" partes de seu **sistema já pronto**. <br/> Além disso, até no próprio backend precisei criar um cálculo para consertar o fuso horário exibido no painel de controle.
+
+### "Caindo na real" após o uso
+
+Um dos principais planos era usar uma lib moderna em nosso projeto, como o React por exemplo, e, até mesmo criar um app para loja (com React Native)... mas isso só seria possível se não utilizássemos o OpenCart, infelizmente, devido o mesmo não abrir suporte para tais bibliotecas.
+
+Se pelo menos um de nós dentro do time soubéssemos da existência do Headless CMS, com certeza não iriamos deixar de lado, porque era essa a peça do nosso quebra-cabeça.
 
 ## Headless CMS e seus diferenciais
 
-Headless CMS se distingue bastande na entrega da **parte visual** em comparação ao CMS padrão, devido ser fornecido através de uma API para ser consumida pelo nosso próprio **front-end** (a partir de um framework/lib como React Js ou Vue Js). E isso é fantástico! Nos dá muita flexibilidade e o ramo de criatividade se expande exponencialmente! 
+Headless CMS se distingue bastande na entrega da **parte visual** em comparação ao CMS padrão, devido ser fornecido através de uma API para ser consumida pelo nosso próprio **front-end** (a partir de um framework/lib como React, Angular ou Vue). E isso é fantástico! Nos dá muita flexibilidade e o ramo de criatividade se expande exponencialmente! 
 
 _- "Okay, então quer dizer que esse sistema atribuindo somente a parte de gestão e dados, compensa mais do que a entrega de toda a estrutura da aplicação?! MAS COMO? 🤨"_
 
@@ -33,16 +59,33 @@ Como parâmetro, vamos usar a plataforma [GraphCMS](https://hygraph.com/) para a
 
 Além disso, você já deve ter percebido que a palavra GraphCMS lembra um certo carinha... chamado [GraphQL](https://graphql.org/). E sim! A plataforma se baseia nele, pois trata-se de uma linguagem de consulta em meio à um ambiente de execução (voltado à servidores para API's). O Headless CMS nos permite distribuir dados de uma API de **duas** formas, e é aqui onde o GraphQL se destaca:
 
+
+<div align="center">
+
+<img src="../img/posts/rest.webp" className="bg-transparent" />
+
+<img src="../img/posts/graphql.svg" className="bg-transparent" />
+
+</div>
+
+
 - **Forma 1 (REST)** - _Representational Sate Tranfer_ é um conceito de arquitetura de software baseado em rede, projetado para desacoplar uma API do cliente, visto que, tal projeção é realizada dentro do servidor, logo, o servidor é responsável pela sua arquitetura.
 
-- **Forma 2 (GraphQL)** - É uma linguagem voltada ao cliente, portanto, sua arquitetura permite que o aplicativo front-end determine quais dados devem ser pesquisados e a quantidade de dados que devem ser retornados ao servidor (diferente do REST, que depende do back-end para exercer tal função).
+- **Forma 2 (GraphQL)** - É uma linguagem voltada ao cliente, portanto, sua arquitetura permite que o aplicativo front-end determine quais dados devem ser pesquisados e a quantidade de dados que devem ser retornados ao servidor (diferente do REST, que depende do back-end para exercer esta função).
 
-## GraphQL e suas vantagens
+### GraphQL e suas vantagens
 
 Uma das **principais** características do GraphQL, é resolver os problemas de **Over-fetching** (excesso de dados) e **Under-fetching** (dados insuficientes), já que, é o "front" quem solicita ao "back" quais informações é preciso, em qual lugar e requisição.
 
 Bom, e não posso falar de GraphQL sem comentar sobre o [Apollo](https://www.apollographql.com/). Apollo é uma plataforma nativa responsável por realizar solicitações GraphQL, e controle de cache, uma vez que ocorra a duplicação de requisições, será retornado os mesmo dados para que não seja preciso executar novamente a mesma requisição.
 
+![Logotipos do React, Apollo  e GraphQL](../img/posts/apollo-react-graphql.png)
 
+
+## Conclusão Pessoal
+
+A principal questão aqui, não é te convencer explicando que Headless CMS é melhor que o CMS padrão, **cada um é superior em determinados ambientes ou necessidades**, portanto, se houvesse outra pessoa na criação daquele e-commerce citado, ela poderia sim se aprimorar com o OpenCart ou com qualquer outro CMS! 
+
+Mas aestivermos falando que a aplicação precisa de uma boa escalabilidade, ou um aplicativo, ou até mesmo se houver uma grande estimativa de dados, com certeza eu otpo pelo Headless, tendo a liberdade de usar qualquer tecnologia, escrevendo meu próprio código e sendo fiel à tudo o que foi planejado.
 
 

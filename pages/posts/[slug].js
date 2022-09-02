@@ -9,12 +9,12 @@ import {
 import {
   CustomLink, 
   CustomH2, 
-  CustomH3,
   CustomBold,
   CustomSpan,
   CustomHr,
   CustomBlockquote,
   CustomLi,
+  CustomImage,
 } from '../../components/ComponentsForMDX';
 
 import { MDXRemote } from 'next-mdx-remote';
@@ -34,12 +34,12 @@ import SEO from '../../components/SEO';
 const components = {
   a: CustomLink,
   h2: CustomH2,
-  h3: CustomH3,
   b: CustomBold,
   span: CustomSpan,
   hr: CustomHr,
   blockquote: CustomBlockquote,
   li: CustomLi,
+  img: CustomImage,
   // It also works with dynamically-imported components, which is especially
   // useful for conditionally loading components for certain routes.
   // See the notes in README.md for more details.
