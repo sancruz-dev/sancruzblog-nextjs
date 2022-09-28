@@ -7,11 +7,11 @@ module.exports = {
       },
       {
         source: '/:path*',
-        destination: `${process.env.DIST_URL}/:path*`
+        destination: 'https://sancruz.vercel.app/:path*'
       },
       {
         source: '/',
-        destination: `${process.env.DIST_URL}`
+        destination: 'https://sancruz.vercel.app'
       },
     ]
   }
