@@ -7,11 +7,11 @@ module.exports = {
       },
       {
         source: '/:path*',
-        destination: `${DIST_URL}/:path*`
+        destination: 'https://sanportfolio.vercel.app/:path*'
       },
       {
         source: '/',
-        destination: `${DIST_URL}`
+        destination: 'https://sanportfolio.vercel.app'
       },
     ]
   }
