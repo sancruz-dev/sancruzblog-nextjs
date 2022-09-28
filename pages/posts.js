@@ -8,9 +8,8 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import { Typewriter } from "react-simple-typewriter";
-import { Octopus } from '../components/LottieAnimations/Octopus';
 
-export default function Index({ posts, globalData }) {
+export default function posts({ posts, globalData }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />

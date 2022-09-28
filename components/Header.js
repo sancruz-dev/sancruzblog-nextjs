@@ -5,7 +5,7 @@ import { InstagramLogo, LinkedinLogo, TwitterLogo, GithubLogo } from 'phosphor-r
 export default function Header({ name }) {
   return (
     <header className="pt-20 pb-12 grid grid-flow-row">
-      <Link href="/">
+      <Link href="/posts">
         <a className='justify-self-center'>
           <DiverAvatar/>
         </a>
