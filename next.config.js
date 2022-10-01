@@ -3,15 +3,15 @@ module.exports = {
     return [
       {
         source: '/:path*',
-        destination: '/:path*'
+        destination: '/:path*' 
       },
       {
         source: '/:path*',
-        destination: 'https://sanportfolio.vercel.app/:path*'
-      },
+        destination: `${process.env.BASE_URL}/:path*`
+      }, 
       {
         source: '/',
-        destination: 'https://sanportfolio.vercel.app'
+        destination: `${process.env.BASE_URL}`
       },
     ]
   }
