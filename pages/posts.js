@@ -12,13 +12,14 @@ import { Typewriter } from "react-simple-typewriter";
 export default function posts({ posts, globalData }) {
   return (
     <Layout>
-      <SEO title={globalData.name} description={globalData.blogTitle} />
+      <SEO title={globalData.name} description={globalData.seoDesc} />
 
       <Header name={globalData.name} />
 
       <main className="w-full">
         <h1 className="text-3xl lg:text-5xl text-center mb-12 italic">
-          Aprofunde-se em <br/>
+          Aprofunde-se em 
+          <br/>
           <Typewriter
             loop
             cursor
