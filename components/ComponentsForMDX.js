@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function CustomLink({ as, href, ...otherProps }) {
   return <>
-    <Link as={as} href={href}>
+    <Link as={as} href={href} legacyBehavior>
       <a className='text-primary hover:text-gradient-1 transition-colors no-underline' {...otherProps} />
     </Link>
   </>
