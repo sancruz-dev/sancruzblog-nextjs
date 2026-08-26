@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
+import { formatDate } from '../utils/format-date';
 import SEO from '../components/SEO';
 import { Typewriter } from "react-simple-typewriter";
 
@@ -51,7 +52,7 @@ export default function posts({ posts, globalData }) {
                 <a className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
                   {post.data.date && (
                     <p className="uppercase mb-3 font-bold opacity-60">
-                      {post.data.date}
+                      {formatDate(post.data.date)}
                     </p>
                   )}
                   <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
