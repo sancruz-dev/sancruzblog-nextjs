@@ -86,10 +86,9 @@ npm run lint
 
 ## Deploy
 
-O deploy é feito na [Netlify](https://www.netlify.com/), via
-[`@netlify/plugin-nextjs`](https://www.npmjs.com/package/@netlify/plugin-nextjs),
-configurado em `netlify.toml`. Cada push no branch principal gera um novo
-build estático do site.
+O deploy é feito na [Vercel](https://vercel.com/), com suporte nativo ao
+Next.js. Cada push no branch principal gera um novo build estático do
+site.
 
 ## Roadmap
 
