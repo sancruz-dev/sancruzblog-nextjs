@@ -1,146 +1,108 @@
-# Personal Blog Application 
+# SanCruz Blog
 
-![Status badge](https://img.shields.io/badge/Status-Finalizado-green.svg)
-![Version badge](https://img.shields.io/badge/Version-1.0.0-orange.svg) 
+![Status badge](https://img.shields.io/badge/Status-Em%20evolu%C3%A7%C3%A3o-blue.svg)
 
-![React Version](https://img.shields.io/badge/React-^18.2.0-477EEB.svg)
-![Next Version](https://img.shields.io/badge/Next-LTS-477EEB.svg)
-![Tailwind Version](https://img.shields.io/badge/Tailwind-^3.0.0-477EEB.svg)
+![Next Version](https://img.shields.io/badge/Next-latest-477EEB.svg)
+![React Version](https://img.shields.io/badge/React-%5E18.2.0-477EEB.svg)
+![Tailwind Version](https://img.shields.io/badge/Tailwind-%5E3.0.0-477EEB.svg)
 
 ![Thumb of project](./thumb-app.png)
 
-## About this Project
+## Sobre o projeto
 
-The project consists of presenting content in the form of blog posts, with the main themes being: front-end development, the relationship between front-end and back-end development, general web programming, innovation, and performance. In addition, it will be a platform for ideas and opinions that come to mind, and insights about systems, companies, work, etc.
+Blog pessoal sobre desenvolvimento front-end, arquitetura de sistemas e
+carreira em tecnologia. Os artigos são escritos em MDX, versionados neste
+mesmo repositório e renderizados estaticamente pelo Next.js.
 
-## Why?
+Este projeto também é parte do meu portfólio pessoal — feedback sobre
+código, estrutura ou qualquer outro ponto de melhoria é muito bem-vindo.
 
-This project is part of my personal/professional portfolio, so, I will be very happy if you can give me some feedback about the project, code, structure or anything that will help me become a better developer!
+## Stack
 
-In addition, I seek recognition for my dedication to technology, so that more individuals/legal entities get to know my work, because I am concerned with the user, and this is a primordial characteristic of the IT professional, solve problems.
+- [**Next.js**](https://nextjs.org/) (Pages Router) — geração estática (SSG) das páginas
+- [**React 18**](https://react.dev/)
+- [**Tailwind CSS**](https://tailwindcss.com/) + `@tailwindcss/typography`
+- [**next-mdx-remote**](https://github.com/hashicorp/next-mdx-remote) — parsing e renderização do conteúdo MDX
+- [**gray-matter**](https://github.com/jonschlinkert/gray-matter) — leitura do frontmatter dos posts
+- [**rehype-prism**](https://github.com/mapbox/rehype-prism) — syntax highlighting nos blocos de código
+- ESLint (`eslint-config-next`) + Prettier
 
+## Como os posts funcionam
 
-## Features
+Cada artigo é um arquivo `.mdx` dentro de `posts/`. O nome do arquivo
+(sem extensão) define o slug da URL (`/posts/<slug>`). Todo o conteúdo é
+lido do sistema de arquivos em build-time — não há CMS nem banco de dados
+envolvidos nesta etapa do projeto.
 
-- Get information about my core skills organized by knowledge level;
+Frontmatter esperado em cada post:
 
-- Get information about my projects and professional experience;
-
-- Give any feedback you have in mind or noticed on the site. _The best insight comes from the user_;
-
-- Contact me via direct links to private chats like WhatsApp, Messenger or professional email;
-
-- If you have a project/problem that needs a programmer to solve it, fill out the form and send it with just one click;
-
-- Was the portfolio not enough? Download my resume for more information;
-
-- Use the system on any device or browser;
-
-- Settings
-  - Choose the theme you prefer: light or dark;
-  - Choose the language you prefer: English or Portuguese-br;
-
-
-## Main Frameworks/Libs/Tech's
-
-### Front-End
-
-- [**Axios**](https://www.npmjs.com/package/axios) - HTTP Client;
-- [**Express**](https://www.npmjs.com/package/express) - server builder;
-- [**Framer Motion**](https://www.npmjs.com/package/framer-motion) - animated moves;
-- [**i18next**](https://www.npmjs.com/package/react-i18next) - app internationalization;
-- [**Phosphor React**](https://www.npmjs.com/package/phosphor-react) - default of project icons;
-- [**React**](https://www.npmjs.com/package/react) - UI build;
-- [**Sass**](https://www.npmjs.com/package/sass) - CSS preprocessor;
-- [**TailwindCSS**](https://www.npmjs.com/package/tailwindcss) - framework CSS;
-- [**Typescript**](https://www.npmjs.com/package/typescript) - javascipt typing;
-- [**Vite**](https://www.npmjs.com/package/vite) - HMR API over native ESM | code bundling with Rollup;
-
-### Back-End
-
-- [**Cors**](https://www.npmjs.com/package/cors) - middleware activation;
-- [**Jest**](https://www.npmjs.com/package/jest) - unit tests;
-- [**Nodemailer**](https://www.npmjs.com/package/nodemailer) - send emails from Node.js;
-- [**PostgreSQL**](https://www.postgresql.org) - DBMS obejct-relational obejct-relational;
-- [**Prisma**](https://www.npmjs.com/package/prisma) - obejct-relational mapping;
-- [**SQLite**](https://www.npmjs.com/package/sqlite) - database engine small, fast and self-contained;
-- [**Ts Node**](https://www.npmjs.com/package/ts-node) - typeScript execution engine and REPL for Node.js;
-- [**Typescript**](https://www.npmjs.com/package/typescript) - javascript typing;
-
-## Practices, Methods and Principles
-
-- Accessibility;
-- CI/CD;
-- Clean Code;
-- CSS Architecture;
-- Folder Architecture;
-- Responsivity;
-- SEO;
-- SOLID;
-- Unit Tests;
-- User Experience;
-
-
-## Hosting Platforms
-
-- [**Vercel**](https://vercel.com/) - Front-end deployed;
-- [**Railway**](https://railway.app/) - Database cloud;
+```yaml
+---
+title: 'Título do artigo'
+description: 'Resumo curto usado na listagem e em SEO.'
+date: '2026-08-25' # formato ISO (YYYY-MM-DD)
+slug: nome-do-arquivo # deve bater com o nome do arquivo .mdx
+author: 'Nome do autor'
+category: 'Backend'
+level: 'Beginner' # Beginner | Intermediate | Advanced
+tags:
+  - exemplo
+  - tags
+---
+```
 
 ## Getting Started
 
-### Installing
+### Instalando as dependências
 
-#### Cloning the Repository
-
-``` 
-git clone https://github.com/sancruz-dev/portfolio-oficial
+```bash
+npm install
 ```
 
-```
-cd portfolio-oficial
-```
+### Rodando em desenvolvimento
 
-#### Installing Dependencies
-
-Dependencies must be installed on the folder **server** AND **web**: `C:\portfolio-oficial\server` and `C:\portfolio-oficial\web`
-
-```
-npm install 
-```
-
-_or_
-
-```
-yarn 
-```
-
-### Environment Variable
-
-Create a file .env in the project raw and add:
-
-```
-BASE_URL=http://localhost:3000
-```
-
-### Runnning
-
-For the application to run, you will run a single command in two terminals, i.e. in two folders: `server` and `web` (already mentioned above). The command is:
-
-```
+```bash
 npm run dev
 ```
 
-_or_
+Ou, para observar mudanças nos arquivos `.mdx` e recarregar automaticamente:
 
+```bash
+npm run dev:watch
 ```
-yarn dev
+
+### Build de produção
+
+```bash
+npm run build
+npm run start
 ```
 
-## Author
+### Lint
 
-- ***Sanmir Cruz***
+```bash
+npm run lint
+```
 
-## License 
+## Deploy
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/sancruz-dev/portfolio-oficial/blob/add-license-1/LICENSE.md) file for details
+O deploy é feito na [Netlify](https://www.netlify.com/), via
+[`@netlify/plugin-nextjs`](https://www.npmjs.com/package/@netlify/plugin-nextjs),
+configurado em `netlify.toml`. Cada push no branch principal gera um novo
+build estático do site.
 
+## Roadmap
+
+O projeto está evoluindo de um blog pessoal estático para uma plataforma
+colaborativa de publicação técnica, com submissão de artigos por terceiros,
+curadoria humana e publicação automatizada via Pull Request. Essa evolução
+está sendo documentada progressivamente em `docs/` conforme avança.
+
+## Autor
+
+- **Sanmir Cruz**
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT — veja o arquivo
+[LICENSE.md](./LICENSE.md) para mais detalhes.
