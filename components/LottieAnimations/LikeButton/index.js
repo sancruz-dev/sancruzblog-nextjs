@@ -1,6 +1,11 @@
 import { useState } from "react";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import animationData from './animHeart.json';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('react-lottie'), {
+  ssr: false,
+});
 
 export function LikeButton() {
   const [isLiked, setLikeState] = useState(false);

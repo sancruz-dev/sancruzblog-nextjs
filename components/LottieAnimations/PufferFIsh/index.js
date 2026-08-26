@@ -1,6 +1,12 @@
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from './animPuffer.json';
+
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('react-lottie'), {
+  ssr: false,
+});
 
 export function PufferFish() {
   const defaultOptions = {

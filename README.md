@@ -11,7 +11,7 @@
 
 ## About this Project
 
-O projeto consiste em apresentar conteúdos em formato de blog posts, que terá como principais temas: front-end, relações do front-end e back-end, geral da programação web, inovação e performance. Além de tudo, será palco de ideias e opiniões que virem à minha cabeça, e, insights sobre algum sistema, empresa, trabalho e etc...
+The project consists of presenting content in the form of blog posts, with the main themes being: front-end development, the relationship between front-end and back-end development, general web programming, innovation, and performance. In addition, it will be a platform for ideas and opinions that come to mind, and insights about systems, companies, work, etc.
 
 ## Why?
 
@@ -114,6 +114,14 @@ _or_
 yarn 
 ```
 
+### Environment Variable
+
+Create a file .env in the project raw and add:
+
+```
+BASE_URL=http://localhost:3000
+```
+
 ### Runnning
 
 For the application to run, you will run a single command in two terminals, i.e. in two folders: `server` and `web` (already mentioned above). The command is:
@@ -136,17 +144,3 @@ yarn dev
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/sancruz-dev/portfolio-oficial/blob/add-license-1/LICENSE.md) file for details
 
-
-<br/>
-
-<div align="center">
-
-
-### Contact here
-
-[![whatsapp Badge](https://img.shields.io/badge/-Whatsapp-25D366?style=flat-rounded&logo=whatsapp&logoColor=white&link&=20=https://wa.me/5511972874030)](https://wa.me/5511972874030)&nbsp;&nbsp;
-[![Discord Badge](https://img.shields.io/badge/-Discord-7289DA?style=flat-rounded&logo=discord&logoColor=white&link&=20=https://discord.gg/vbHXDDDDx7)](https://discord.gg/vbHXDDDDx7)&nbsp;&nbsp;
-[![gmail Badge](https://img.shields.io/badge/-Gmail-D14836?style=flat-rounded&logo=gmail&logoColor=white&link&=20=mailto:sancruz.dev@gmail.com)](mailto:sancruz.dev@gmail.com)&nbsp;&nbsp;
-[![messenger Badge](https://img.shields.io/badge/-Messenger-006AFF?style=flat-rounded&logo=messenger&logoColor=white&link&=20=https://m.me/sanmir.pereira)](https://m.me/sanmir.pereira)&nbsp;&nbsp;
-
-</div>

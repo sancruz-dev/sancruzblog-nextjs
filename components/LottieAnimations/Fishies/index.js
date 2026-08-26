@@ -1,7 +1,12 @@
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from './animFishies.json';
 import styles from "../../Layout.module.css"
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('react-lottie'), {
+  ssr: false,
+});
 
 export function Fishies() {
   const defaultOptions = {
