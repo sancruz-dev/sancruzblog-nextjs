@@ -84,6 +84,19 @@ npm run start
 npm run lint
 ```
 
+## Envio de artigos (`/submit`)
+
+A página [`/submit`](pages/submit.js) é um formulário para enviar um artigo
+para revisão. Ela monta um arquivo `.mdx` (frontmatter + conteúdo) a partir
+dos campos preenchidos e envia para o
+[Content Submission Service](https://github.com/sancruz-dev/microservice-submission-blog),
+que valida o conteúdo e conduz o workflow de curadoria.
+
+Para funcionar em desenvolvimento, o serviço precisa estar rodando (por
+padrão em `http://localhost:5080`; configurável via
+`NEXT_PUBLIC_SUBMISSION_SERVICE_URL` no `.env`). Sem o serviço no ar, o
+formulário mostra uma mensagem de erro de conexão.
+
 ## Deploy
 
 O deploy é feito na [Vercel](https://vercel.com/), com suporte nativo ao
