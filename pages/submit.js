@@ -9,7 +9,7 @@ import { buildSubmissionMdx, slugify } from '../utils/build-submission-mdx';
 // Falls back to the local dev port so this works out of the box without
 // requiring a .env entry - see content-submission-service/README.md.
 const SUBMISSION_SERVICE_URL =
-  process.env.NEXT_PUBLIC_SUBMISSION_SERVICE_URL || 'http://localhost:5080';
+  process.env.NEXT_PUBLIC_SUBMISSION_SERVICE_URL || 'http://localhost:5211';
 
 const LEVELS = ['Beginner', 'Intermediate', 'Advanced'];
 
