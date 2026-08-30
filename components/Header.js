@@ -18,15 +18,6 @@ export default function Header({ name }) {
       </p>
       
       <ul className='flex justify-between py-10 mx-8 text-3xl'>
-        <li>
-          <Link href='https://twitter.com/SanCruz_Dev/' legacyBehavior>
-            <a target='_blank' title='Twitter'>
-              <div className='group rounded-lg p-2 opacity-70 hover:bg-[#00acee] hover:opacity-100 hover:text-[#fff] transition-colors'>
-                <TwitterLogo className='delay-200 group-hover:scale-125 transition-transform'/>
-              </div>
-            </a>
-          </Link>
-        </li>
         <li> 
           <Link href='https://www.linkedin.com/in/sanmir-cruz/' legacyBehavior>
             <a target='_blank' title='LinkedIn'>
