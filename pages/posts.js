@@ -38,6 +38,14 @@ export default function posts({ posts, globalData }) {
           />
         </h1>
 
+        <div className="flex justify-center mb-12">
+          <Link href="/submit" legacyBehavior>
+            <a className="py-3 px-6 rounded-lg bg-primary text-white font-bold hover:opacity-90 transition">
+              Enviar seu artigo
+            </a>
+          </Link>
+        </div>
+
         <ul className="w-full">
           {posts.map((post) => (
             <li
