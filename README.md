@@ -7,7 +7,8 @@
 ![React Version](https://img.shields.io/badge/React-%5E18.2.0-477EEB.svg)
 ![Tailwind Version](https://img.shields.io/badge/Tailwind-%5E3.0.0-477EEB.svg)
 
-![Thumb of project](./thumb-app.png)
+<img width="1920" height="1080" alt="thumb-sancruzblog-part2" src="https://github.com/user-attachments/assets/bd58ee29-9e76-409b-a824-7cc87eaa9ba0" />
+
 
 ## Sobre o projeto
 
